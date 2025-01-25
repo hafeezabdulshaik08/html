@@ -1,62 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-		table, th, td, tr {
-			border: 2px solid black;
- 			border-collapse: collapse;
- 			text-align: center;
- 			
- 		}
- 		tr{
- 		 height:40px;
- 		}
+ 		<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .submit {
+            background-color: #007BFF;
+            color: white;
+        }
+        .submit:hover {
+            background-color: #0056b3;
+        }
+        .reset {
+            background-color: #dc3545;
+            color: white;
+        }
+        .reset:hover {
+            background-color: #a71d2a;
+        }
+        h1,h3 {text-align: center;}
+    </style>
 	</style>
 <title>HTML Tables Demonstration</title>
 	
 </head>
 <body>
-	<h1>HTML Timetable Example</h1>
-	<H3>CLASS TIMETABLE</H3>
-	<div class="ttable">
-	<table  style="width:50%">
+	<h1>Registration Form</h1>
+	<H3>Fill your details</H3>
+	<table border="1">
 	<colgroup>
   <col span="1" style="background-color:#C6BEBC">
 </colgroup>
 		<tr >
 			<th>Full Name:</th> 
-			<td><input type="text" id="fname" name="fname"<br></td>
+			<td><input type="text" name="full name"placeholder="Enter your full Name:" Required><br></td>
 		</tr>
 		
 		<tr>
 			<th>Possword:</th>
-			<td><input type="text" id="fname" name="fname"<br></td>
+			<td><input type="text" name="possword" placeholder="Enter your possword:"  Required><br></td>
+			
 		</tr></td>
 		</tr>
 		<tr>
 			<th>Age:</th>
-			<td><input type="text" id="fname" name="fname"<br></td>
+			<td><input type="number" name="age" min="1" max="100" required>
 		</tr></td>
 		</tr>
 		<tr>
 		  <th>Date of Birth:</th>
-		  <td></td>
+		  <td><input type="date" name="dob" required></td>
 		</tr>
 		<tr>
 		    <th>Gender:</th>
-		    <td>ADS</td>
+		    <td>
+                    <input type="radio" name="gender" value="male" required> Male
+                    <input type="radio" name="gender" value="female" required> Female
+                    <input type="radio" name="gender" value="other" required> Other
+            </td>
 		</tr>
 		<tr>
-		   <th>Hobbies:</th>
-		   <td>FSD</td>
+		    <th>Hobbies:</th>
+                <td>
+                    <input type="checkbox" name="hobbies" value="reading"> Reading<br>
+                    <input type="checkbox" name="hobbies" value="sports"> Sports<br>
+                    <input type="checkbox" name="hobbies" value="traveling"> Traveling
+             </td>
 		</tr>
 		<tr>
 		   <th>Country:</th>
-		   <td>SE</td>
+		   <td>
+		   	<form action="/action_page.php">
+  				<label for="Country">Select your Country:</label>
+  				<select name="Country" id="Country">
+    			<option value="India">India</option>
+    			<option value="SriLanka">SriLanka</option>
+    			<option value="Pakistan">Pakistan</option>
+    			<option value="Bangladesh">Bangladesh</option>
+  				</select>
+  				<br><br>
+  				</form>
+		   </td>
 		</tr>
 		<tr>
 		   <th>About Yourself:</th>
-		   <td>SE</td>
+		   	<td><textarea name="about" rows="5" cols="30" placeholder="Write about yourself..."></textarea></td>
 		</tr>
+	</table>
 		
-	</div>
+	<div class="button-group">
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+    </div>
+</body>
+</html>
